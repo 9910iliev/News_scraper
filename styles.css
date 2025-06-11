@@ -1,0 +1,70 @@
+body {
+  background-color: #f4f7f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.container {
+  background: white;
+  max-width: 600px;
+  width: 100%;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.last-update {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.counters {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.counter {
+  flex: 1;
+  background: #e3f2fd;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 4px 10px rgba(33, 150, 243, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.counter:hover {
+  background: #bbdefb;
+}
+
+.counter h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #0d47a1;
+}
+
+.count {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0d47a1;
+  margin: 0;
+  
+}
+
+#monthly-count {
+  padding-top: 23px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ПТП Броячи за Пловдив</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>ПТП Броячи за Пловдив</h1>
+    <p class="last-update">Последно обновяване: <span id="last-update">--</span></p>
+
+    <div class="counters">
+      <div class="counter">
+        <h2>Последни 24 часа</h2>
+        <p class="count" id="daily-count">0</p>
+      </div>
+      <div class="counter">
+        <h2>Последна седмица</h2>
+        <p class="count" id="weekly-count">0</p>
+      </div>
+      <div class="counter">
+        <h2>Последен месец</h2>
+        <p class="count" id="monthly-count">0</p>
+      </div>
+    </div>
+  </div>
+
+<script>
+  fetch('stats.json')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('daily-count').textContent = data.daily;
+      document.getElementById('weekly-count').textContent = data.weekly;
+      document.getElementById('monthly-count').textContent = data.monthly;
+      document.getElementById('last-update').textContent = data.last_update;
+    })
+    .catch(() => {
+      console.error('Неуспешно зареждане на статистики');
+    });
+</script>
+</body>
+</html>
